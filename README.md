@@ -1,2 +1,3 @@
 # my-python-util
-My Python utilities
+
+This repository is for frequently used python scripts of mine.
