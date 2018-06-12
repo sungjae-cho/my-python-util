@@ -4,6 +4,8 @@ import os
 
 
 def get_file_list(dir_path, extension=''):
+    if dir_path[-1] != '/':
+        dir_path = dir_path + '/'
     file_list = list()
     for f in listdir(dir_path):
         if isfile(join(dir_path, f)):
