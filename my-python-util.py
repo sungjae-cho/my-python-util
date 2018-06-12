@@ -3,10 +3,16 @@ from os.path import isfile, join
 import os
 
 
-def get_file_list(dir_path):
-    if dir_path != '/':
-        dir_path = dir_path + '/'
-    file_list = [ (dir_path + f) for f in listdir(dir_path) if isfile(join(dir_path, f))]
+def get_file_list(dir_path, extension=''):
+    file_list = list()
+    for f in listdir(dir_path):
+        if isfile(join(dir_path, f)):
+            file_path = dir_path + f
+            if extension == '':
+                file_list.append(file_path)
+            else:
+                if get_extension(file_path) == extension:
+                    file_list.append(file_path)
     return file_list
 
 def get_extension(file_path):
