@@ -1,4 +1,5 @@
 import os
 
-for file_path in files:
-    os.remove(file_path)
+def del_files(files)
+    for file_path in files:
+        os.remove(file_path)
